@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moshi &amp; Company Inc. · Influencer marketing</title>
+  <meta name="description" content="We find and shortlist the right creators for your brand, do the outreach, and you only pay for the ones who say they're interested.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://moshiandcompany.com/">
+  <meta property="og:url" content="https://moshiandcompany.com/">
+  <meta name="theme-color" content="#fdfaf6">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Moshi &amp; Company Inc.">
+  <meta property="og:description" content="Get 10–50 interested creators for your brand, with zero upfront cost.">
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="preload" href="./assets/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/newsreader-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    @font-face {
+      font-family: "Newsreader";
+      src: url("./assets/newsreader-latin.woff2") format("woff2");
+      font-weight: 400 600; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: "Newsreader";
+      src: url("./assets/newsreader-italic-latin.woff2") format("woff2");
+      font-weight: 400 600; font-style: italic; font-display: swap;
+    }
+    @font-face {
+      font-family: "Inter";
+      src: url("./assets/inter-latin.woff2") format("woff2");
+      font-weight: 400 600; font-style: normal; font-display: swap;
+    }
+
+    :root {
+      color-scheme: light;
+      --paper: #fdfaf6;
+      --ink: #111111;
+      --ink-soft: #55524d;
+      --ink-faint: #8a857d;
+      --rule: #e3ded5;
+      --tile: #f4eee5;
+      --highlight: #e6edca;
+      --focus: #3d5a2c;
+      --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
+      --sans: "Inter", ui-sans-serif, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    a { color: inherit; }
+    :focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; border-radius: 6px; }
+
+    .wrap { width: min(100% - 48px, 1240px); margin-inline: auto; }
+
+    /* ---------- Hero (matches mockup) ---------- */
+    .hero {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: clamp(28px, 4vw, 64px) 0 clamp(48px, 5vw, 80px);
+    }
+    .brand { text-decoration: none; display: inline-block; }
+    .brand-name {
+      font-family: var(--serif);
+      font-optical-sizing: auto;
+      font-weight: 500;
+      font-size: clamp(1.45rem, 2.4vw, 2.5rem);
+      letter-spacing: -0.012em;
+      line-height: 1.1;
+      margin: 0;
+    }
+    .brand-tag {
+      margin: 12px 0 0;
+      font-family: var(--sans);
+      font-size: clamp(0.7rem, 0.85vw, 0.95rem);
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #3b3934;
+    }
+
+    .hero-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding-top: clamp(40px, 5vw, 64px);
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-optical-sizing: auto;
+      font-weight: 590;
+      font-size: clamp(2.35rem, 4.55vw, 4.75rem);
+      line-height: 1.16;
+      letter-spacing: -0.022em;
+      margin: 0;
+      text-wrap: balance;
+    }
+    .pill {
+      font-style: italic;
+      font-weight: 500;
+      background: var(--highlight);
+      border-radius: 0.2em;
+      padding: 0.02em 0.14em 0.06em 0.12em;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+      white-space: nowrap;
+    }
+
+    .lede {
+      font-family: var(--serif);
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-size: clamp(1.12rem, 1.62vw, 1.62rem);
+      line-height: 1.5;
+      color: #1d1c1a;
+      margin: clamp(22px, 2.3vw, 34px) 0 0;
+      max-width: 39em;
+      text-wrap: pretty;
+    }
+    .lede em { font-style: italic; font-weight: 500; }
+
+    .steps {
+      list-style: none;
+      margin: clamp(36px, 3.9vw, 64px) 0 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      justify-content: center;
+      text-align: left;
+    }
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: clamp(14px, 1.3vw, 22px);
+      padding: 0 clamp(20px, 2.6vw, 44px);
+      position: relative;
+    }
+    .step + .step::before {
+      content: "";
+      position: absolute;
+      left: 0; top: 4px; bottom: 4px;
+      width: 1px;
+      background: var(--rule);
+    }
+    .icon {
+      flex: none;
+      width: clamp(46px, 5.2vw, 88px); height: clamp(46px, 5.2vw, 88px);
+      border-radius: clamp(10px, 0.95vw, 16px);
+      background: var(--tile);
+      display: grid;
+      place-items: center;
+    }
+    .icon svg { width: 50%; height: 50%; stroke: #1b1b1b; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .step h2 {
+      font-family: var(--sans);
+      font-size: clamp(0.95rem, 1.5vw, 1.55rem);
+      font-weight: 600;
+      letter-spacing: -0.005em;
+      line-height: 1.3;
+      margin: 1px 0 4px;
+    }
+    .step p {
+      margin: 0;
+      font-size: clamp(0.84rem, 1.3vw, 1.35rem);
+      line-height: 1.38;
+      color: var(--ink-soft);
+      white-space: nowrap;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75em;
+      margin-top: clamp(36px, 4.4vw, 72px);
+      padding: 0.52em 1.5em 0.58em 1.6em;
+      border: 1.5px solid var(--ink);
+      border-radius: clamp(12px, 1vw, 18px);
+      background: transparent;
+      color: var(--ink);
+      font-family: var(--serif);
+      font-optical-sizing: auto;
+      font-weight: 500;
+      font-size: clamp(1.15rem, 2.25vw, 2.3rem);
+      letter-spacing: -0.005em;
+      text-decoration: none;
+      transition: background-color .2s ease, color .2s ease;
+    }
+    .cta svg { width: 1em; height: 1em; stroke: currentColor; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; transition: transform .2s ease; }
+    .cta:hover { background: var(--ink); color: var(--paper); }
+    .cta:hover svg { transform: translateX(3px); }
+
+    /* ---------- Below the fold ---------- */
+    .faq {
+      border-top: 1px solid var(--rule);
+      padding: clamp(64px, 8vw, 112px) 0;
+    }
+    .faq-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr);
+      gap: clamp(32px, 6vw, 96px);
+      width: min(100% - 48px, 1040px);
+      margin-inline: auto;
+    }
+    .section-tag {
+      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.26em; text-transform: uppercase; color: #3b3934; margin: 0 0 14px;
+    }
+    .faq h2 {
+      font-family: var(--serif); font-optical-sizing: auto; font-weight: 500;
+      font-size: clamp(2rem, 3vw, 2.7rem); line-height: 1.1; letter-spacing: -0.02em; margin: 0;
+    }
+    .faq dl { margin: 0; }
+    .faq dt {
+      font-family: var(--serif); font-optical-sizing: auto; font-weight: 500;
+      font-size: 1.3rem; line-height: 1.3; letter-spacing: -0.01em;
+      padding-top: 26px; border-top: 1px solid var(--rule);
+    }
+    .faq dt:first-child { padding-top: 0; border-top: 0; }
+    .faq dd {
+      margin: 8px 0 26px; color: var(--ink-soft); font-size: 0.98rem; line-height: 1.6; max-width: 36em;
+    }
+    .faq dd:last-child { margin-bottom: 0; }
+
+    .closing {
+      border-top: 1px solid var(--rule);
+      text-align: center;
+      padding: clamp(64px, 8vw, 112px) 0;
+    }
+    .closing h2 {
+      font-family: var(--serif); font-optical-sizing: auto; font-weight: 500;
+      font-size: clamp(2rem, 3.4vw, 3.2rem); line-height: 1.12; letter-spacing: -0.02em; margin: 0 auto; max-width: 16em; text-wrap: balance;
+    }
+    .closing p { font-family: var(--serif); font-size: clamp(1.08rem, 1.4vw, 1.3rem); color: #1d1c1a; margin: 18px auto 0; max-width: 30em; }
+
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 28px 0 36px;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--ink-faint);
+    }
+    footer p { margin: 0; }
+    footer a { color: inherit; text-underline-offset: 3px; }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 960px) {
+      .br-d { display: none; }
+      .steps { grid-template-columns: 1fr; gap: 0; width: min(100%, 420px); }
+      .step { padding: 18px 0; }
+      .step + .step::before { left: 0; right: 0; top: 0; bottom: auto; width: auto; height: 1px; }
+      .step p { white-space: normal; }
+      .faq-inner { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 40px, 1240px); }
+      .hero { min-height: auto; padding-top: 28px; }
+      .hero-main { padding-top: 44px; }
+      h1 { font-size: clamp(1.75rem, 7.9vw, 2.4rem); line-height: 1.16; }
+      .lede { font-size: 1.1rem; }
+      .steps { margin-top: 30px; }
+      .cta { width: 100%; justify-content: center; padding-block: 0.8em; }
+    }
+    @media (max-width: 600px) {
+      .pill { white-space: normal; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .cta, .cta svg { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero wrap">
+    <a class="brand" href="./" aria-label="Moshi &amp; Company Inc., home">
+      <p class="brand-name">Moshi &amp; Company Inc.</p>
+      <p class="brand-tag">Influencer marketing</p>
+    </a>
+
+    <main class="hero-main" id="top">
+      <h1>Get 10–50 Interested Creators <br class="br-d">for Your Brand&nbsp;— <span class="pill">with Zero Upfront Cost.</span></h1>
+      <p class="lede">We find and shortlist the right creators, you approve the list, we do the outreach, <br class="br-d">and you <em>only pay</em> for the ones who say they’re interested.</p>
+
+      <ol class="steps" aria-label="How it works">
+        <li class="step">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3 3 7.5 12 12l9-4.5L12 3Z"/><path d="m3 12 9 4.5 9-4.5"/><path d="m3 16.5 9 4.5 9-4.5"/></svg>
+          </span>
+          <div>
+            <h2>Get a curated list</h2>
+            <p>We find relevant creators <br class="br-d">for your brand.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5 21 3Z"/></svg>
+          </span>
+          <div>
+            <h2>We reach out</h2>
+            <p>We contact them <br class="br-d">on your behalf.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8.2 12.2 2.6 2.6 5-5.3"/></svg>
+          </span>
+          <div>
+            <h2>You get interested creators</h2>
+            <p>You only pay for the ones <br class="br-d">who want to work with you.</p>
+          </div>
+        </li>
+      </ol>
+
+      <a class="cta" href="https://cal.com/moshi-gnkltz/strategy-call" target="_blank" rel="noopener">
+        See if Your Brand Qualifies
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg>
+      </a>
+    </main>
+  </header>
+
+  <section class="faq" aria-labelledby="faq-title">
+    <div class="faq-inner">
+      <div>
+        <p class="section-tag">Questions</p>
+        <h2 id="faq-title">Before you book</h2>
+      </div>
+      <dl>
+        <dt>What counts as an “interested” creator?</dt>
+        <dd>A creator from your approved list who replies that they want to work with your brand. You only pay for those, never for the ones who ignore us or say no.</dd>
+        <dt>Do I see the creators before you contact them?</dt>
+        <dd>Yes. We send you a shortlist first. Nobody gets contacted until you approve the list.</dd>
+        <dt>Is there anything to pay upfront?</dt>
+        <dd>No. There’s no setup fee and no retainer. You pay once creators say they’re interested.</dd>
+        <dt>What happens on the call?</dt>
+        <dd>We look at your brand and product and tell you whether we can find the right creators for it. If it isn’t a fit, we’ll say so.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="closing" aria-labelledby="closing-title">
+    <div class="wrap">
+      <h2 id="closing-title">Only pay for creators who <span class="pill">want to work with you.</span></h2>
+      <p>Book a short call and we’ll tell you if your brand is a fit.</p>
+      <a class="cta" href="https://cal.com/moshi-gnkltz/strategy-call" target="_blank" rel="noopener">
+        See if Your Brand Qualifies
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap"><p>Moshi &amp; Company Inc., Ontario · <a href="/privacy-policy/">Privacy</a></p></div>
+  </footer>
+</body>
+</html>
