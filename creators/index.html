@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>For Creators · Moshi &amp; Company Inc.</title>
+  <meta name="description" content="We connect creators with brands for paid partnerships. Free to join.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://moshiandcompany.com/creators/">
+  <meta property="og:url" content="https://moshiandcompany.com/creators/">
+  <meta name="theme-color" content="#fdfaf6">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="For Creators · Moshi &amp; Company Inc.">
+  <meta property="og:description" content="Get paid brand deals in your niche. Free to join.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preload" href="../assets/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    @font-face { font-family: "Newsreader"; src: url("../assets/newsreader-latin.woff2") format("woff2"); font-weight: 400 600; font-style: normal; font-display: swap; }
+    @font-face { font-family: "Newsreader"; src: url("../assets/newsreader-italic-latin.woff2") format("woff2"); font-weight: 400 600; font-style: italic; font-display: swap; }
+    @font-face { font-family: "Inter"; src: url("../assets/inter-latin.woff2") format("woff2"); font-weight: 400 600; font-style: normal; font-display: swap; }
+
+    :root {
+      color-scheme: light;
+      --paper: #fdfaf6; --ink: #111111; --ink-soft: #55524d; --ink-faint: #8a857d;
+      --rule: #e3ded5; --tile: #f4eee5; --highlight: #e6edca; --focus: #3d5a2c; --error: #a33a2a;
+      --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
+      --sans: "Inter", ui-sans-serif, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; position: relative; }
+    a { color: inherit; }
+    :focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; border-radius: 6px; }
+    .wrap { width: min(100% - 48px, 1240px); margin-inline: auto; }
+
+    .switch { position: absolute; top: clamp(22px, 3vw, 40px); right: clamp(20px, 3vw, 48px); font-size: 0.85rem; font-weight: 500; color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid var(--rule); padding-bottom: 2px; }
+    .switch:hover { color: var(--ink); border-color: var(--ink); }
+
+    .top { text-align: center; padding: clamp(28px, 4vw, 64px) 0 0; }
+    .brand { text-decoration: none; display: inline-block; }
+    .brand-name { font-family: var(--serif); font-optical-sizing: auto; font-weight: 500; font-size: clamp(1.45rem, 2.4vw, 2.5rem); letter-spacing: -0.012em; line-height: 1.1; margin: 0; }
+    .brand-tag { margin: 12px 0 0; font-size: clamp(0.7rem, 0.85vw, 0.95rem); font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase; color: #3b3934; }
+
+    .intro { text-align: center; padding: clamp(48px, 6vw, 88px) 0 clamp(40px, 5vw, 72px); }
+    h1 { font-family: var(--serif); font-optical-sizing: auto; font-weight: 590; font-size: clamp(2.35rem, 4.55vw, 4.75rem); line-height: 1.14; letter-spacing: -0.022em; margin: 0; text-wrap: balance; }
+    .pill { font-style: italic; font-weight: 500; background: var(--highlight); border-radius: 0.2em; padding: 0.02em 0.14em 0.06em 0.12em; white-space: nowrap; }
+    .lede { font-family: var(--serif); font-size: clamp(1.12rem, 1.62vw, 1.62rem); line-height: 1.5; color: #1d1c1a; margin: clamp(20px, 2.2vw, 32px) auto 0; max-width: 34em; text-wrap: pretty; }
+
+    .steps { list-style: none; margin: clamp(36px, 3.9vw, 60px) 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, auto); justify-content: center; text-align: left; }
+    .step { display: flex; align-items: flex-start; gap: clamp(14px, 1.3vw, 22px); padding: 0 clamp(20px, 2.6vw, 44px); position: relative; }
+    .step + .step::before { content: ""; position: absolute; left: 0; top: 4px; bottom: 4px; width: 1px; background: var(--rule); }
+    .icon { flex: none; width: clamp(46px, 4.4vw, 72px); height: clamp(46px, 4.4vw, 72px); border-radius: clamp(10px, 0.95vw, 16px); background: var(--tile); display: grid; place-items: center; }
+    .icon svg { width: 50%; height: 50%; stroke: #1b1b1b; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .step h2 { font-size: clamp(0.95rem, 1.3vw, 1.3rem); font-weight: 600; line-height: 1.3; margin: 1px 0 4px; }
+    .step p { margin: 0; font-size: clamp(0.84rem, 1.1vw, 1.1rem); line-height: 1.4; color: var(--ink-soft); max-width: 15em; }
+
+    .cta { display: inline-flex; align-items: center; gap: 0.75em; margin-top: clamp(36px, 4vw, 60px); padding: 0.52em 1.5em 0.58em 1.6em; border: 1.5px solid var(--ink); border-radius: clamp(12px, 1vw, 18px); background: transparent; color: var(--ink); font-family: var(--serif); font-weight: 500; font-size: clamp(1.15rem, 2vw, 2rem); text-decoration: none; transition: background-color .2s ease, color .2s ease; }
+    .cta svg { width: 1em; height: 1em; stroke: currentColor; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+    .cta:hover { background: var(--ink); color: var(--paper); }
+
+    .signup { border-top: 1px solid var(--rule); padding: clamp(64px, 8vw, 112px) 0; }
+    .signup-inner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: clamp(32px, 6vw, 96px); width: min(100% - 48px, 1040px); margin-inline: auto; }
+    .section-tag { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.26em; text-transform: uppercase; color: #3b3934; margin: 0 0 14px; }
+    .signup h2 { font-family: var(--serif); font-weight: 500; font-size: clamp(2rem, 3vw, 2.7rem); line-height: 1.1; letter-spacing: -0.02em; margin: 0; }
+    .signup .side p { color: var(--ink-soft); font-size: 0.98rem; line-height: 1.6; margin: 16px 0 0; max-width: 24em; }
+
+    form { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 20px; }
+    .field { display: flex; flex-direction: column; gap: 6px; }
+    .field.full { grid-column: 1 / -1; }
+    label { font-size: 0.88rem; font-weight: 600; }
+    label .opt { font-weight: 400; color: var(--ink-faint); }
+    input, textarea { font: inherit; font-size: 1rem; color: var(--ink); background: #fffdf9; border: 1.5px solid var(--rule); border-radius: 12px; padding: 12px 14px; width: 100%; transition: border-color .15s ease; }
+    textarea { min-height: 84px; resize: vertical; }
+    input:focus, textarea:focus { outline: none; border-color: var(--ink); }
+    input::placeholder, textarea::placeholder { color: #aaa49a; }
+    .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    .actions { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 20px; margin-top: 6px; }
+    button { font-family: var(--serif); font-weight: 500; font-size: 1.25rem; color: var(--paper); background: var(--ink); border: 1.5px solid var(--ink); border-radius: 14px; padding: 0.55em 1.5em 0.6em; cursor: pointer; transition: opacity .2s ease; }
+    button:hover { opacity: .88; }
+    button[disabled] { opacity: .55; cursor: progress; }
+    .fine { font-size: 0.82rem; color: var(--ink-faint); margin: 0; }
+    .fine a { text-underline-offset: 3px; }
+    .status { grid-column: 1 / -1; margin: 0; font-size: 0.98rem; min-height: 1.5em; }
+    .status.err { color: var(--error); }
+    .thanks { display: none; background: var(--highlight); border-radius: 16px; padding: 28px 30px; }
+    .thanks h3 { font-family: var(--serif); font-weight: 500; font-size: 1.7rem; margin: 0 0 6px; }
+    .thanks p { margin: 0; color: #2b2a27; }
+    .done form { display: none; }
+    .done .thanks { display: block; }
+
+    footer { border-top: 1px solid var(--rule); padding: 28px 0 36px; text-align: center; font-size: 0.82rem; color: var(--ink-faint); }
+    footer p { margin: 0; }
+    footer a { color: inherit; text-underline-offset: 3px; }
+
+    @media (max-width: 960px) {
+      .br-d { display: none; }
+      .steps { grid-template-columns: 1fr; width: min(100%, 420px); margin-inline: auto; }
+      .step { padding: 18px 0; }
+      .step + .step::before { left: 0; right: 0; top: 0; bottom: auto; width: auto; height: 1px; }
+      .step p { max-width: none; }
+      .signup-inner { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 40px, 1240px); }
+      .switch { position: static; display: inline-block; margin: 0 0 18px; }
+      .top { padding-top: 24px; }
+      h1 { font-size: clamp(1.9rem, 8.4vw, 2.5rem); }
+      .pill { white-space: normal; }
+      .lede { font-size: 1.1rem; }
+      .cta { width: 100%; justify-content: center; padding-block: 0.8em; }
+      form { grid-template-columns: 1fr; }
+      button { width: 100%; padding-block: 0.75em; }
+    }
+    @media (prefers-reduced-motion: reduce) { .cta, button, input, textarea { transition: none; } }
+  </style>
+</head>
+<body>
+  <header class="top wrap">
+    <a class="switch" href="../brands/">Are you a brand? &rarr;</a>
+    <a class="brand" href="../" aria-label="Moshi &amp; Company Inc., home">
+      <p class="brand-name">Moshi &amp; Company Inc.</p>
+      <p class="brand-tag">Influencer marketing</p>
+    </a>
+  </header>
+
+  <main>
+    <section class="intro wrap">
+      <h1>Get Paid Brand Deals <br class="br-d">in Your Niche&nbsp;— <span class="pill">Free to Join.</span></h1>
+      <p class="lede">We connect creators with brands for paid partnerships. Tell us about you once, and we’ll reach out when a brand in your niche wants to work with creators like you.</p>
+
+      <ol class="steps" aria-label="How it works">
+        <li class="step">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16v4Z"/><path d="m13.5 6.5 4 4"/></svg></span>
+          <div><h2>Sign up</h2><p>Share your handle, niche and usual rates.</p></div>
+        </li>
+        <li class="step">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></svg></span>
+          <div><h2>We match you</h2><p>When a brand is a fit, we email you the details.</p></div>
+        </li>
+        <li class="step">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8.2 12.2 2.6 2.6 5-5.3"/></svg></span>
+          <div><h2>You choose</h2><p>Say yes only to the deals you want.</p></div>
+        </li>
+      </ol>
+
+      <a class="cta" href="#join">Join for Free <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14"/><path d="m6 13 6 6 6-6"/></svg></a>
+    </section>
+
+    <section class="signup" id="join" aria-labelledby="join-title">
+      <div class="signup-inner">
+        <div class="side">
+          <p class="section-tag">Join</p>
+          <h2 id="join-title">Tell us about you</h2>
+          <p>It takes about a minute and it’s free. We’ll only use your details to contact you about brand partnerships.</p>
+        </div>
+
+        <div id="signup-box">
+          <form id="signup" novalidate>
+            <div class="field">
+              <label for="f-name">Name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required maxlength="200">
+            </div>
+            <div class="field">
+              <label for="f-email">Email</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required maxlength="320">
+            </div>
+            <div class="field full">
+              <label for="f-handle">Instagram, TikTok or YouTube handle</label>
+              <input id="f-handle" name="handle" type="text" required maxlength="300" placeholder="e.g. @yourname on TikTok">
+            </div>
+            <div class="field">
+              <label for="f-niche">Niche</label>
+              <input id="f-niche" name="niche" type="text" required maxlength="200" placeholder="e.g. skincare, fitness, home">
+            </div>
+            <div class="field">
+              <label for="f-followers">Follower count</label>
+              <input id="f-followers" name="followers" type="text" inputmode="text" required maxlength="100" placeholder="e.g. 25K on TikTok">
+            </div>
+            <div class="field full">
+              <label for="f-rates">Usual rates <span class="opt">(optional)</span></label>
+              <textarea id="f-rates" name="rates" maxlength="500" placeholder="What you usually charge per post, Reel, TikTok or video"></textarea>
+            </div>
+            <div class="hp" aria-hidden="true">
+              <label for="f-website">Leave this empty</label>
+              <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <p class="status" id="status" role="status" aria-live="polite"></p>
+            <div class="actions">
+              <button type="submit" id="submit">Join for free</button>
+              <p class="fine">By joining you agree to our <a href="/privacy-policy/">privacy policy</a>.</p>
+            </div>
+          </form>
+          <div class="thanks" role="status">
+            <h3>You’re in. Thank you!</h3>
+            <p>We’ve got your details. We’ll email you when a brand in your niche is a fit.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap"><p>Moshi &amp; Company Inc., Ontario · <a href="../">Home</a> · <a href="../brands/">For Brands</a> · <a href="/privacy-policy/">Privacy</a></p></div>
+  </footer>
+
+  <script>
+    (function () {
+      // Sign-ups go to a Supabase table (insert-only for the public key; nobody can read rows with it).
+      var ENDPOINT = "https://bvjqmgdncztavjnzvriy.supabase.co/rest/v1/moshico_creator_signups";
+      var KEY = "sb_publishable_Nywh_FvITr-8KXa07BbyAQ_0QVZnYSY";
+      var form = document.getElementById("signup");
+      var box = document.getElementById("signup-box");
+      var status = document.getElementById("status");
+      var btn = document.getElementById("submit");
+      var required = ["name", "email", "handle", "niche", "followers"];
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        status.className = "status"; status.textContent = "";
+        if (form.website.value) { box.classList.add("done"); return; }
+        var data = {};
+        for (var i = 0; i < required.length; i++) {
+          var el = form[required[i]];
+          var v = el.value.trim();
+          if (!v) { status.className = "status err"; status.textContent = "Please fill in " + el.labels[0].textContent.trim().toLowerCase() + "."; el.focus(); return; }
+          data[required[i]] = v;
+        }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) { status.className = "status err"; status.textContent = "Please check your email address."; form.email.focus(); return; }
+        data.rates = form.rates.value.trim() || null;
+        data.source = "moshiandcompany.com/creators";
+        btn.disabled = true; btn.textContent = "Sending…";
+        fetch(ENDPOINT, {
+          method: "POST",
+          headers: { "apikey": KEY, "Content-Type": "application/json", "Prefer": "return=minimal" },
+          body: JSON.stringify(data)
+        }).then(function (r) {
+          if (!r.ok) throw new Error(r.status);
+          box.classList.add("done");
+        }).catch(function () {
+          status.className = "status err";
+          status.textContent = "Sorry, that didn’t go through. Please try again in a moment.";
+          btn.disabled = false; btn.textContent = "Join for free";
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
